@@ -1,38 +1,99 @@
-.App {
+/* .search-container section */
+
+.search-container {
+  padding: 5vw;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-container input.search-box {
+  padding: 10px;
+  box-shadow: 0 0 5px #aaa;
+  min-width: 350px;
+  outline: none;
+  border: none;
+  transition: 300ms ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-container input.search-box:focus {
+  box-shadow: 0 0 10px rgb(186, 186, 186);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-container input.search-box::placeholder {
+  font-weight: 600;
+}
+.coins-container {
+  max-width: 992px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.coins-container .conin {
+  max-height: 100px;
+  border: 3px solid rgb(239, 239, 239);
+  margin-bottom: -3px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.coins-container .conin span {
+  display: inline-block;
+  text-align: left;
+  width: 60px;
+  white-space: nowrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.coins-container .conin span:nth-child(2) {
+  margin-right: 50px;
+}
+
+.coins-container .conin span.w-100-px {
+  width: 110px;
+}
+
+.coins-container .conin .greenPriceChange {
+  color: red;
+  font-weight: bold;
+}
+.coins-container .conin .redPriceChange {
+  color: green;
+  font-weight: bold;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.coins-container .conin img {
+  width: 75px;
+  height: 75px;
+  padding: 10px;
+}
+
+.loader-img {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .search-container {
+    padding: 40px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 992px) {
+  .coins-container .conin {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .coins-container .conin {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .coins-container .conin span{
+    margin-right: 20px;
   }
 }
